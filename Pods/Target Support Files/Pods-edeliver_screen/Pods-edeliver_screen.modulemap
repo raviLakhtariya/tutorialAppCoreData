@@ -1,0 +1,6 @@
+framework module Pods_edeliver_screen {
+  umbrella header "Pods-edeliver_screen-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="16B2657" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Company" representedClassName="Company" syncable="YES" codeGenerationType="class">
+        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="companyId" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="conformpassword" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="link" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mobileno" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="selectCity" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="selectCountry" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="jobs" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Jobs" inverseName="relationship" inverseEntity="Jobs" syncable="YES"/>
+        <relationship name="posts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Posts" inverseName="companypost" inverseEntity="Posts" syncable="YES"/>
+    </entity>
+    <entity name="Companyjob" representedClassName="Companyjob" syncable="YES" codeGenerationType="class">
+        <attribute name="applylink" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="companyid" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="experience" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="jobdec" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="jobid" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="jobname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="salery" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Companypost" representedClassName="Companypost" syncable="YES" codeGenerationType="class">
+        <attribute name="companyid" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="postDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="postid" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="postTitle" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Jobs" representedClassName=".Jobs" syncable="YES" codeGenerationType="class">
+        <attribute name="applylink" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="companyid" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="experience" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="jobdesc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="jobId" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="jobname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="salery" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="relationship" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Company" inverseName="jobs" inverseEntity="Company" syncable="YES"/>
+    </entity>
+    <entity name="Posts" representedClassName="Posts" syncable="YES" codeGenerationType="class">
+        <attribute name="comapnyid" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="postdescriptions" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="postid" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="posttitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userid" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="companypost" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Company" inverseName="posts" inverseEntity="Company" syncable="YES"/>
+        <relationship name="userpost" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="User" inverseName="posts" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="User" representedClassName="User" syncable="YES" codeGenerationType="class">
+        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="conformpassword" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="link" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mobileno" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="selectCity" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="selectCountry" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="userid" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="posts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Posts" inverseName="userpost" inverseEntity="Posts" syncable="YES"/>
+    </entity>
+    <entity name="Userpost" representedClassName="Userpost" syncable="YES" codeGenerationType="class">
+        <attribute name="postDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="postid" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="postTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userid" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Company" positionX="216" positionY="101" width="128" height="238"/>
+        <element name="Companyjob" positionX="549" positionY="123" width="128" height="165"/>
+        <element name="Companypost" positionX="-2" positionY="198" width="128" height="105"/>
+        <element name="Jobs" positionX="376" positionY="261" width="128" height="178"/>
+        <element name="Posts" positionX="61" positionY="-30" width="128" height="148"/>
+        <element name="User" positionX="-135" positionY="-12" width="128" height="223"/>
+        <element name="Userpost" positionX="205" positionY="-42" width="128" height="105"/>
+    </elements>
+</model>

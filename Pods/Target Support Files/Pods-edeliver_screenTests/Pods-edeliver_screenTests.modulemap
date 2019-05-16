@@ -1,0 +1,6 @@
+framework module Pods_edeliver_screenTests {
+  umbrella header "Pods-edeliver_screenTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

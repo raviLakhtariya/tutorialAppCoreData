@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "container:"
+      name = "coredata properties">
+      <FileRef
+         location = "group:Company+CoreDataProperties.swift">
+      </FileRef>
+      <FileRef
+         location = "group:User+CoreDataProperties.swift">
+      </FileRef>
+      <FileRef
+         location = "group:Posts+CoreDataProperties.swift">
+      </FileRef>
+      <FileRef
+         location = "group:Jobs+CoreDataProperties.swift">
+      </FileRef>
+      <FileRef
+         location = "group:Companyjob+CoreDataClass.swift">
+      </FileRef>
+      <FileRef
+         location = "group:Companyjob+CoreDataProperties.swift">
+      </FileRef>
+      <FileRef
+         location = "group:Companypost+CoreDataClass.swift">
+      </FileRef>
+      <FileRef
+         location = "group:Companypost+CoreDataProperties.swift">
+      </FileRef>
+      <FileRef
+         location = "group:Userpost+CoreDataClass.swift">
+      </FileRef>
+      <FileRef
+         location = "group:Userpost+CoreDataProperties.swift">
+      </FileRef>
+   </Group>
+   <FileRef
+      location = "group:edeliver_screen.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+</Workspace>
